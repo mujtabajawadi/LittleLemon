@@ -1,9 +1,14 @@
 import './App.css'
+import Footer_Section from './Footer_Section'
+import Header from './Header'
+import Main_Section from './Main_Section'
 
 function App() {
   return (
     <>
-      <h1>Little-Lemon Site Coming Soon...</h1>
+      <Header />
+      <Main_Section />
+      <Footer_Section/>
     </>
   )
 }
