@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Joshua",
+        "reviews": "Decadent, delicious dessert- the perfect ending to a fantastic meal.",
+        "rating": 4
+    },
+    {
+        "name": "Sasha",
+        "reviews": "The pasta dish was flavorful and hearty, and the portion size was generous.",
+        "rating": 3
+    },
+    {
+        "name": "Robin",
+        "reviews": "The sushi was fresh and flavorful, and the presentation was beautiful.",
+        "rating": 5
+    },
+    {
+        "name": "Natasha",
+        "reviews": "The pizza was delicious, with just the right amount of cheese and amazing toppings.",
+        "rating": 4
+    }
+]

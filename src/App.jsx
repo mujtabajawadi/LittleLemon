@@ -1,14 +1,32 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import Footer_Section from './Footer_Section'
-import Header from './Header'
-import Main_Section from './Main_Section'
+import AppLayout from './Components/Layout/AppLayout'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import ErrorPage from './Pages/ErrorPage'
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <AppLayout />,
+      errorElement: <ErrorPage/>,
+      children: [
+        {
+          path: "/",
+          element: <Home/>
+        },
+        {
+          path: 'about',
+          element: <About/>
+        }
+      ]
+    }
+  ])
   return (
     <>
-      <Header />
-      <Main_Section />
-      <Footer_Section/>
+      <RouterProvider router={router}></RouterProvider>
     </>
   )
 }
