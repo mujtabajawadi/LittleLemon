@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import Chicago from "../Components/UI/Chicago";
 
 const About = () => {
-  return (
-    <>
-      <h1>Hello I am Little Lemon Hotel</h1>
-    </>
-  )
-}
+  return <Chicago />;
+};
 
-export default About
+export default About;

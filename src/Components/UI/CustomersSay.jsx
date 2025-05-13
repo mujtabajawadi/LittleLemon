@@ -9,16 +9,18 @@ const CustomersSay = () => {
           <h1>Valuable Customer Reviews</h1>
         </div>
         <div id="reviews-card">
-          {reviews.map((currentReview, index) => {
-            return (
-              <ReviewsCard
-                key={index}
-                title={currentReview.name}
-                description={currentReview.reviews}
-                rating={currentReview.rating}
-              />
-            );
-          })}
+          
+            {reviews.map((currentReview, index) => {
+              return (
+                <ReviewsCard
+                  key={index}
+                  title={currentReview.name}
+                  description={currentReview.reviews}
+                  rating={currentReview.rating}
+                />
+              );
+            })}
+        
         </div>
       </div>
     </section>
