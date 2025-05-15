@@ -9,6 +9,7 @@ import Menu from './Pages/Menu'
 import Reservations from './Pages/Reservations'
 import Order from './Pages/Order'
 import Login from './Pages/login'
+import ConfirmedBooking from './Pages/ConfirmedBooking'
 
 
 function App() {
@@ -42,9 +43,13 @@ function App() {
         {
           path: 'login',
           element: <Login/>
-        }
+        },
       ],
     },
+    {
+      path: '/confirmed',
+      element: <ConfirmedBooking/>
+    }
   ]);
   return (
     <>

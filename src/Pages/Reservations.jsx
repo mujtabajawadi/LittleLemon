@@ -1,26 +1,12 @@
 import { useEffect, useReducer, useState } from "react";
 import BookingForm from "../Components/UI/BookingForm";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
 
-export const availableTimesReducer = (state, action) => {
+const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case "UPDATE_TIMES":
-      const date = new Date(action.payload);
-      const dayOfWeek = date.getDay();
-
-      if (dayOfWeek === 0 || dayOfWeek === 6) {
-        return [
-          "16:00-17:00",
-          "17:00-18:00",
-          "18:00-19:00",
-          "19:00-20:00",
-          "20:00-21:00",
-          "21:00-22:00",
-          "22:00-23:00",
-        ];
-      } else {
-        return ["19:00-20:00", "20:00-21:00", "21:00-22:00", "22:00-23:00"];
-      }
+      return action.payload;
     default:
       return state;
   }
@@ -36,17 +22,19 @@ const initialFormData = {
 };
 
 const initializeTimes = () => {
-  return ([
-    "16:00-17:00",
-    "17:00-18:00",
-    "18:00-19:00",
-    "19:00-20:00",
-    "20:00-21:00",
-    "21:00-22:00",
-    "22:00-23:00",
-  ])
+  const today = new Date();
+
+  try {
+    const fetchData = window.fetchAPI || fetchAPI;
+    return fetchData(today);
+  } catch (err) {
+    console.error("fetchAPI not available yet", err);
+    return [];
+  }
 };
+
 const Reservations = () => {
+  let navigate = useNavigate();
   const [formData, setFormData] = useState(initialFormData);
 
   const [availableTimes, dispatchAvailableTimes] = useReducer(
@@ -62,15 +50,23 @@ const Reservations = () => {
   }, [formData.date]);
 
   const updateTimes = (selectedDate) => {
-    dispatchAvailableTimes({
-      type: "UPDATE_TIMES",
-      payload: selectedDate,
-    });
+    try {
+      const fetchData = window.fetchAPI || fetchAPI;
+      const dateObj = new Date(selectedDate);
+      const times = fetchData(dateObj);
 
-    setFormData((prev) => ({
-      ...prev,
-      time: "",
-    }));
+      dispatchAvailableTimes({
+        type: "UPDATE_TIMES",
+        payload: times,
+      });
+
+      setFormData((prev) => ({
+        ...prev,
+        time: "",
+      }));
+    } catch (err) {
+      console.error("fetchAPI failed", err);
+    }
   };
 
   const handleInputChange = (event) => {
@@ -83,13 +79,24 @@ const Reservations = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    const { username, email, occasion, time } = formData;
-    toast.success(
-      `${username} made a reservation for ${occasion} at ${time} O'clock. Confirmation mail will be sent to ${email}.Thanks for choosing us!`
-    );
-    console.log(formData);
-    setFormData(initialFormData);
+
+    try {
+      const submitData = window.submitAPI || submitAPI;
+      const success = submitData(formData);
+
+      if (success) {
+        navigate("/confirmed");
+
+        setFormData(initialFormData);
+      } else {
+        toast.error("Reservation failed. Please try again.");
+      }
+    } catch (err) {
+      console.error("submitAPI error", err);
+      toast.error("API error occurred.");
+    }
   };
+
   return (
     <section id="form">
       <main id="form-container">

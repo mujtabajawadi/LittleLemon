@@ -270,7 +270,7 @@ nav ul > li {
     }
   }
 }
-#error-page {
+.error-info-page {
   height: 100dvh;
   display: flex;
   flex-direction: column;
