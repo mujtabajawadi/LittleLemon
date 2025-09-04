@@ -1,0 +1,56 @@
+#about-section {
+    width: 100%;
+    height: 80dvh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  
+    #about-data {
+      width: 75%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  
+      #about-text {
+        width: 15rem;
+        padding-top: 2rem;
+  
+        h1,
+        h3 {
+          font-family: var(--markaziBold);
+        }
+  
+        p {
+          color: #495e57;
+          font-family: var(--karla);
+        }
+      }
+  
+      #about-images {
+        position: relative;
+        display: flex;
+        padding-top: 2rem;
+        justify-content: flex-end;
+  
+        #image-chef {
+          position: absolute;
+          width: 400px;
+          z-index: 999;
+          height: 200px;
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+          box-shadow: 0px 1px 20px grey;
+        }
+        #image-retaurant {
+          position: absolute;
+          width: 400px;
+          height: 200px;
+          z-index: -2;
+          border-bottom-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          bottom: 35px;
+          right: 18%;
+          box-shadow: 0px 1px 20px grey;
+        }
+      }
+    }
+  }

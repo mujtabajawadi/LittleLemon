@@ -4,6 +4,8 @@ const BookingForm = ({
   handleInputChange,
   handleFormSubmit,
 }) => {
+
+  const today = new Date().toISOString().split("T")[0]
   const handleSubmit = (event) => {
     event.preventDefault();
     handleFormSubmit(event);
@@ -18,7 +20,11 @@ const BookingForm = ({
         name="username"
         value={formData.username}
         id="username"
+        min="2"
+        max="25"
         required
+        pattern="[A-Za-z\s]+"
+        title="Only letters and spaces are allowed."
         autoComplete="off"
         placeholder="Your name here..."
         onChange={handleInputChange}
@@ -30,6 +36,8 @@ const BookingForm = ({
         id="email"
         value={formData.email}
         required
+        pattern="^[a-zA-z][a-zA-Z0-9._\%+\-]*"
+        title="Email must not start with numbers or special characters(_,-,!,*)."
         autoComplete="off"
         placeholder="Your email here..."
         onChange={handleInputChange}
@@ -39,6 +47,7 @@ const BookingForm = ({
         type="date"
         id="res-date"
         name="date"
+        min={today}
         value={formData.date}
         required
         onChange={handleInputChange}
@@ -50,7 +59,7 @@ const BookingForm = ({
         required
         value={formData.time}
         onChange={handleInputChange}
-        disabled={!formData.date}
+        disabled={!formData.date || formData.date < today}
       >
         <option value="" disabled>
           Select Time Slot
@@ -68,14 +77,14 @@ const BookingForm = ({
         type="number"
         name="guests"
         value={formData.guests}
-        placeholder={1}
-        min={1}
-        max={50}
+        placeholder= "1"
+        min="1"
+        max="50"
         id="guests"
         required
         onChange={handleInputChange}
       />
-      <label htmlFor="occasion">Occasion</label>
+      <label htmlFor="occasion" aria-label="On Click">Occasion</label>
       <select
         id="occasion"
         name="occasion"
@@ -92,7 +101,7 @@ const BookingForm = ({
         <option>Farewell</option>
       </select>
       <div id="form-button">
-        <button type="submit" id="reserve-button">
+        <button type="submit" id="reserve-button" disabled={!formData}>
           Make Your Reservation
         </button>
       </div>

@@ -2,6 +2,7 @@ import { useEffect, useReducer, useState } from "react";
 import BookingForm from "../Components/UI/BookingForm";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
+import "../Components/CSS/Reservations.css"
 
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
@@ -81,8 +82,18 @@ const Reservations = () => {
     event.preventDefault();
 
     try {
+
+      
+
+      let existingLocalStorageData = JSON.parse(localStorage.getItem("User Data")) || []
+      existingLocalStorageData.push(formData)
+    
+      localStorage.setItem("User Data", JSON.stringify(existingLocalStorageData)); 
+
       const submitData = window.submitAPI || submitAPI;
       const success = submitData(formData);
+
+      
 
       if (success) {
         navigate("/confirmed");

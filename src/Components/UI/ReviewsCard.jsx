@@ -1,5 +1,6 @@
-import React from "react";
+
 import { FaUserCircle } from "react-icons/fa";
+import '../CSS/CustomersSay.css'
 
 const ReviewsCard = ({ title, description, rating }) => {
   return (

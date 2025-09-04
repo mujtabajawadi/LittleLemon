@@ -1,4 +1,5 @@
 import React from 'react'
+import "../CSS/Chicago.css"
 
 const Chicago = () => {
   return (

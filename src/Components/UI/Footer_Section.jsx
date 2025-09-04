@@ -1,3 +1,4 @@
+import "../CSS/Footer_Section.css"
 const Footer_Section = () => {
   return (
     <footer id="footer-section">
