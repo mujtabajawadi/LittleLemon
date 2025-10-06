@@ -23,3 +23,11 @@
     justify-content: space-between;
     gap: 2rem;
   }
+
+  @media screen and (max-width: 600px) {
+    #product-cards{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }

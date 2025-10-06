@@ -78,6 +78,7 @@ nav ul > li {
 
 .error-info-page {
   height: 100dvh;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
