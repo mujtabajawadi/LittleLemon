@@ -89,3 +89,13 @@ nav ul > li {
 }
 
 
+@media screen and (max-width: 600px) {
+  #card{
+    h2{
+      font-size: 8vw;
+    }
+    p{
+      font-size: 1.1rem;
+    }
+  }
+}

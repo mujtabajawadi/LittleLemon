@@ -22,12 +22,15 @@ const BookingForm = ({
         }}
       >
         <p>
-          What to know before you go Restaurant’s terms and conditions We look
-          forward to welcoming you to Little Lemon. Please check our T&C's A
-          discretionary service charge of 12.5% will be applied to the bill for
-          groups of four or more guests. Reserved tables will be held for a
-          maximum of 10 minutes past the confirmed arrival time. We maintain a
-          neat dress code to preserve the atmosphere of our restaurant.
+          <span style={{fontWeight: "bold", color: "black"}}>
+            What to know before you go Restaurant’s terms and conditions:
+          </span> <br />
+          We look forward to welcoming you to Little Lemon. Please check our
+          T&C's A discretionary service charge of 12.5% will be applied to the
+          bill for groups of four or more guests. Reserved tables will be held
+          for a maximum of 10 minutes past the confirmed arrival time. We
+          maintain a neat dress code to preserve the atmosphere of our
+          restaurant.
           <br />
           <span style={{ fontWeight: "bold", color: "black" }}>
             Important dining information:
@@ -70,7 +73,7 @@ const BookingForm = ({
           placeholder="Your email here..."
           onChange={handleInputChange}
         />
-        <label htmlFor="guests">Phone</label>
+        <label htmlFor="phone">Phone</label>
         <input
           type="tel"
           name="phone"

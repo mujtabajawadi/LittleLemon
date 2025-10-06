@@ -49,20 +49,28 @@
     z-index: 5;
   }
 
-  @media screen and (max-width: 572px) {
-    #hero-image{
+  @media screen and (max-width: 600px) {
+    #hero-right{
       display: none;
     }
-    #hero-left{
-      width: 100%;
-      grid-column: 1/-1;
-
+    #hero-section #hero #hero-left {
       h1{
-        font-size: 6vw;
+
+        font-size: 13vw;
       }
+      h3{
+        font-size: 7.5vw;
+      }
+      p{
+        font-size: 4.5vw;
+      }
+      button{
+        font-size: 3.5vw;
+      }
+
     }
     #hero-section{
-      padding: 1rem;
+      padding: 2rem;
       display: flex;
       justify-content: flex-start;
     }
