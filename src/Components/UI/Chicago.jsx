@@ -15,8 +15,8 @@ const Chicago = () => {
           </p>
         </div>
         <div id="about-images">
-          <img src="/images/restaurant chef B.jpg" alt="" id="image-chef" />
-          <img src="/images/restaurant.jpg" alt="" id="image-retaurant" />
+          <img src="/images/restaurant chef B.jpg" alt="" id="image-chef" loading='lazy' />
+          <img src="/images/restaurant.jpg" alt="" id="image-retaurant" loading='lazy' />
         </div>
       </div>
     </section>

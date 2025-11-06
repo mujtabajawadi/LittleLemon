@@ -3,7 +3,7 @@ const Footer_Section = () => {
   return (
     <footer id="footer-section">
       <div id="footer-container">
-        <img src="/images/Logo_grey_scale.svg" alt="" />
+        <img src="/images/Logo_grey_scale.svg" alt="" loading="lazy" />
         <div id="reachtous">
           <h2>Reach out to us</h2>
           <div>
