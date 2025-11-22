@@ -1,30 +1,30 @@
 @font-face {
   font-family: "MarkaziText-Regular";
-  src: url("fonts/MarkaziText-Regular.ttf") format("truetype");
+  src: url("/fonts/MarkaziText-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "MarkaziText-Medium";
-  src: url("fonts/MarkaziText-Medium.ttf") format("truetype");
+  src: url("/fonts/MarkaziText-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "MarkaziText-SemiBold";
-  src: url("fonts/MarkaziText-SemiBold.ttf") format("truetype");
+  src: url("/fonts/MarkaziText-SemiBold.ttf") format("truetype");
 }
 @font-face {
   font-family: "MarkaziText-Bold";
-  src: url("fonts/MarkaziText-Bold.ttf") format("truetype");
+  src: url("/fonts/MarkaziText-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Karla";
-  src: url("fonts/Karla-Regular.ttf"),
-    url("fonts/Karla-Bold.ttf"),
-    url("fonts/Karla-BoldItalic.ttf"),
-    url("fonts/Karla-ExtraBold.ttf"),
-    url("fonts/Karla-ExtraBoldItalic.ttf"),
-    url("fonts/Karla-ExtraLight.ttf"),
-    url("fonts/Karla-ExtraLightItalic.ttf"),
-    url("fonts/Karla-Medium.ttf"),
-    url("fonts/Karla-SemiBold.ttf");
+  src: url("/fonts/Karla-Regular.ttf"),
+    url("/fonts/Karla-Bold.ttf"),
+    url("/fonts/Karla-BoldItalic.ttf"), 
+    url("/fonts/Karla-ExtraBold.ttf"),
+    url("/fonts/Karla-ExtraBoldItalic.ttf"), 
+    url("/fonts/Karla-ExtraLight.ttf"),
+    url("/fonts/Karla-ExtraLightItalic.ttf"), 
+    url("/fonts/Karla-Medium.ttf"),
+    url("/fonts/Karla-SemiBold.ttf");
   font-weight: normal;
   font-style: normal;
 }

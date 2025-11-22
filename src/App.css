@@ -14,13 +14,15 @@ body {
 }
 a {
   text-decoration: none;
+  color: #333333;
+
+  &:hover{
+    text-decoration: underline;
+  }
 }
 li {
   list-style-type: none;
-
-  &:active, :visited{
-    color: #333333;
-  }
+  
 }
 button {
   font-family: var(--karla);
@@ -89,7 +91,7 @@ nav ul > li {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   #card{
     h2{
       font-size: 8vw;

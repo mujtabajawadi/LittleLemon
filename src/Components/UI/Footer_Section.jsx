@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../CSS/Footer_Section.css"
 const Footer_Section = () => {
   return (
@@ -19,16 +20,15 @@ const Footer_Section = () => {
             <p>(555) 123-4567</p>
           </div>
         </div>
-      
-          <div id="gettoknow">
-           <h2>Get to know us</h2>
-            <a href="#">About</a>
-            <a href="#">Careers</a>
-            <a href="#">Press Releases</a>
-            <a href="#">Exclusive Recipies</a>
-            <a href="#">Our Kitchen</a>
-          </div>
-      
+
+        <div id="gettoknow">
+          <h2>Get to know us</h2>
+          <NavLink to="about">About</NavLink>
+          <NavLink to="careers">Careers</NavLink>
+          <NavLink to="releases">Press Releases</NavLink>
+          <NavLink to="exclusive">Exclusive Recipies</NavLink>
+          <NavLink to="menu">Our Kitchen</NavLink>
+        </div>
       </div>
     </footer>
   );

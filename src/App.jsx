@@ -35,15 +35,7 @@ function App() {
         {
           path: "reservations",
           element: <Reservations />,
-        },
-        {
-          path: "order",
-          element: <Order/>
-        },
-        {
-          path: 'login',
-          element: <Login/>
-        },
+        }
       ],
     },
     {

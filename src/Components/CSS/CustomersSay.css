@@ -16,7 +16,7 @@
       #reviews-heading h1 {
         color: #f4ce14;
         font-family: var(--karla);
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: bold;
       }
   
@@ -87,7 +87,7 @@
   }
   
   /* Only use swiper on mobile screens */
-  @media (max-width: 998px) {
+  @media (max-width: 768px) {
     #reviews-card {
       display: none;
     }
@@ -105,8 +105,31 @@
     }
   }
   
-  @media (min-width: 999px) {
+  @media (min-width: 768px) {
     #reviews-swiper {
       display: none;
     }
+  }
+
+  @media (max-width: 768px) {
+    #reviews-section{
+      height: 70vh;
+      text-align: center;
+    }
+    #reviews-container{
+      width: 100%;
+    }
+     #reviews-section #reviews-container #reviews-heading h1{
+        font-size: 2.5rem;
+        width: 90vw;
+        margin: 1rem;
+      }
+
+      #review-card{
+        width: 100%;
+        height: 20rem;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-evenly;
+      }
   }

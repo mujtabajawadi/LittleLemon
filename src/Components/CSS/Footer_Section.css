@@ -3,7 +3,7 @@
     display: flex;
     background-color: #495e57;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
   
     img {
       width: 20%;
@@ -43,4 +43,34 @@
         }
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    #footer-section img{
+      width: 60%;
+    }
+    #footer-container{
+      display: flex;
+      width: 100vw;
+      align-items: center;
+      /* text-align: center; */
+      flex-direction: column;
+      gap: 3rem
+
+    }
+     #footer-section #footer-container {
+      #reachtous, #gettoknow{
+
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        
+        h2{
+          font-size: 12vw;
+        }
+      }
+      }
   }

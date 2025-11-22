@@ -21,9 +21,9 @@ const BookingForm = ({
           lineHeight: "2",
         }}
       >
-        <p>
+        <p style={{textAlign: "justify"}}>
           <span style={{fontWeight: "bold", color: "black"}}>
-            What to know before you go Restaurant’s terms and conditions:
+            Restaurant’s terms and conditions:
           </span> <br />
           We look forward to welcoming you to Little Lemon. Please check our
           T&C's A discretionary service charge of 12.5% will be applied to the

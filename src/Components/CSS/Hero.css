@@ -1,7 +1,7 @@
 #hero-section {
     width: 100vw;
     display: flex;
-    height: max-content;
+    height: fit-content;
     justify-content: center;
     background-color: #4a5e57;
     padding: 2rem;
@@ -42,16 +42,21 @@
   }
   
   #hero-image {
-    height: 60%;
+    height: 60vh;
     width: 100%;
     border-radius: 15px;
     margin-top: 1rem;
     z-index: 5;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
+    #hero-section #hero{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
     #hero-right{
-      display: none;
+      display: block;
     }
     #hero-section #hero #hero-left {
       h1{
@@ -73,5 +78,13 @@
       padding: 2rem;
       display: flex;
       justify-content: flex-start;
+      align-items: center;
     }
+     #hero-image {
+    height: 40vh;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 1rem;
+    z-index: 5;
+  }
   }

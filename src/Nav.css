@@ -18,6 +18,9 @@ header{
 }
 
 @media screen and (max-width: 998px) {
+  nav{
+    position: static;
+  }
   .menu-desktop {
     display: none;
   }
@@ -33,6 +36,7 @@ header{
     align-items: center;
   }
   .menu-mobile {
+    position: sticky;
     display: inline-block;
     width: 100%;
     z-index: 9999;
