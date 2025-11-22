@@ -8,7 +8,7 @@ import ErrorPage from './Pages/ErrorPage'
 import Menu from './Pages/Menu'
 import Reservations from './Pages/Reservations'
 import Order from './Pages/Order'
-import Login from './Pages/login'
+import Login from './Pages/Login'
 import ConfirmedBooking from './Pages/ConfirmedBooking'
 
 
