@@ -16,9 +16,9 @@ const Chicago = () => {
         </div>
         <div id="about-images">
           <picture>
-            <source srcset="/images/restaurant chef B.webp" type='image/webp' />
-            <source srcset="/images/restaurant chef B.jpg" type='image/jpg' />
-          <img src="/images/restaurant chef B.jpg" alt="" id="image-chef" loading='lazy' />
+            <source srcset="/images/restaurant-chef-B.webp" type='image/webp' />
+            <source srcset="/images/restaurant-chef-B.jpg" type='image/jpg' />
+          <img src="/images/restaurant-chef-B.jpg" alt="" id="image-chef" loading='lazy' />
           </picture>
           <picture>
             <source srcset="/images/restaurant.jpg" type='image/jpg' />
