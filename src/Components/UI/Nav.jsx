@@ -19,6 +19,11 @@ const Nav = () => {
       }
     }
   };
+
+
+  const handleNavigation = () => {
+    setShowMenu(false)
+  }
   return (
     <>
       <NavLink to="/">
@@ -27,16 +32,16 @@ const Nav = () => {
 
       <nav className={showMenu ? "menu-mobile" : "menu-desktop"}>
         <ul onClick={handleMenuClick}>
-          <li>
+          <li onClick={() => handleNavigation}>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
+          <li onClick={() => handleNavigation}>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li>
+          <li onClick={() => handleNavigation}>
             <NavLink to="/menu">Menu</NavLink>
           </li>
-          <li>
+          <li onClick={() => handleNavigation}>
             <NavLink to="/reservations">Reservations</NavLink>
           </li>
         </ul>
