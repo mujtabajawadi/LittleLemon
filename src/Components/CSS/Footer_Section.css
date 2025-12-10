@@ -3,7 +3,8 @@
     display: flex;
     background-color: #495e57;
     justify-content: center;
-    padding: 1rem;
+    padding-block: 4rem;
+    padding-inline: 2rem;
   
     img {
       width: 20%;

@@ -33,6 +33,7 @@
   
         #image-chef {
           position: absolute;
+          right: 0;
           width: 400px;
           z-index: 999;
           height: 200px;

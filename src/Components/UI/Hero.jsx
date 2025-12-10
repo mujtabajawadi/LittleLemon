@@ -19,7 +19,11 @@ const Hero = () => {
             </NavLink>
           </div>
           <div id="hero-right">
-            <img src="/images/restauranfood.jpg" id='hero-image' alt="An Image of a Chef" />
+            <picture>
+              <source srcSet="/images/restaurantfood.webp" type="image/webp"/>
+              <source srcSet="/images/restaurantfood.jpg" type="image/jpg"/>
+              <img src="/images/restauranfood.jpg" className='hero-image' alt="An Image of a Chef" />
+            </picture>
           </div>
         </div>
       </section>
