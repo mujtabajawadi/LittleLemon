@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
-import { ImCross } from "react-icons/im";
 import "../../Nav.css";
 import { useState } from "react";
 const Nav = () => {
@@ -24,6 +23,7 @@ const Nav = () => {
   const handleNavigation = () => {
     setShowMenu(false)
   }
+
   return (
     <>
       <NavLink to="/">
@@ -32,17 +32,25 @@ const Nav = () => {
 
       <nav className={showMenu ? "menu-mobile" : "menu-desktop"}>
         <ul onClick={handleMenuClick}>
-          <li onClick={() => handleNavigation}>
-            <NavLink to="/">Home</NavLink>
+          <li>
+            <NavLink to="/" onClick={() => handleNavigation}>
+              Home
+            </NavLink>
           </li>
-          <li onClick={() => handleNavigation}>
-            <NavLink to="/about">About</NavLink>
+          <li>
+            <NavLink to="/about" onClick={() => handleNavigation}>
+              About
+            </NavLink>
           </li>
-          <li onClick={() => handleNavigation}>
-            <NavLink to="/menu">Menu</NavLink>
+          <li>
+            <NavLink to="/menu" onClick={() => handleNavigation}>
+              Menu
+            </NavLink>
           </li>
-          <li onClick={() => handleNavigation}>
-            <NavLink to="/reservations">Reservations</NavLink>
+          <li>
+            <NavLink to="/reservations" onClick={() => handleNavigation}>
+              Reservations
+            </NavLink>
           </li>
         </ul>
       </nav>
